@@ -37,7 +37,7 @@ def speak_text(text):
     tts_engine.say(text)
     tts_engine.runAndWait()
 
-def main():
+def voice_assistant():
     #user_question = listen_to_user()
     user_question = """Give me an introduction about myself."""
 
@@ -78,5 +78,5 @@ def main():
         speak_text(response["output_text"])
 
 
-if __name__ == "__main__":
-    main()
+'''if __name__ == "__main__":
+    main()'''
