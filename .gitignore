@@ -1,0 +1,15 @@
+yolo11x.pt
+yolo11n.pt
+Weapon_Dataset/
+runs/
+Face_Dataset/
+AIOT_Project/
+Include
+Lib
+Scripts
+.env
+Content.txt
+pyvenv.cfg
+__pycache__
+Model.h5
+training_history.json
