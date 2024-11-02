@@ -7,19 +7,19 @@
 ├── Voice_Assistant/     # Entire Voice Assistant Code
 │   ├── db/              # Database Connection for Voice Assistant
 |       └── db.py            
-│   └── langchainget/    # Query file
+│   ├── langchainget/    # Query file
 |       └── query.py  
-└── Content.txt          # Content file for Voice Assistant
-└── .env                 # All APIs used in the project
-└── face_detection.py    # Face Identification Model Training file  
-└── Model.h5             # Face Identification model file
-└── test_face.py         # Face Detection and Identification Testing
-└── yolo.py              # Face Detection using Yolo File
-└── train_yolo.py        # Fine Tuning Yolo for Weapons File
-└── yolo11n.pt           # Yolo pretrained model - not fine tuned
-└── yolo11x.pt           # Yolo pretrained model - not fine tuned
-└── pipeline.py          # Final Pipeline of the project
-└── requirements.txt     # Requirements file
+├── Content.txt          # Content file for Voice Assistant
+├── .env                 # All APIs used in the project
+├── face_detection.py    # Face Identification Model Training file  
+├── Model.h5             # Face Identification model file
+├── test_face.py         # Face Detection and Identification Testing
+├── yolo.py              # Face Detection using Yolo File
+├── train_yolo.py        # Fine Tuning Yolo for Weapons File
+├── yolo11n.pt           # Yolo pretrained model - not fine tuned
+├── yolo11x.pt           # Yolo pretrained model - not fine tuned
+├── pipeline.py          # Final Pipeline of the project
+├── requirements.txt     # Requirements file
 ```
 
 ### Note:
