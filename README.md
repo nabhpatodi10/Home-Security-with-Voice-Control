@@ -19,7 +19,7 @@
 ├── yolo11n.pt           # Yolo pretrained model - not fine tuned
 ├── yolo11x.pt           # Yolo pretrained model - not fine tuned
 ├── pipeline.py          # Final Pipeline of the project
-├── requirements.txt     # Requirements file
+└── requirements.txt     # Requirements file
 ```
 
 ### Note:
