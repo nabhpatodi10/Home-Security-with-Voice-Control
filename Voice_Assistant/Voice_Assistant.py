@@ -7,8 +7,8 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.vectorstores import MongoDBAtlasVectorSearch
 from langchain_community.document_loaders import TextLoader
 
-from langchainget.query import query, get_conversational_chain, get_storage_chain
-from db.db import connect_to_mongo
+from Voice_Assistant.langchainget.query import query, get_conversational_chain, get_storage_chain
+from Voice_Assistant.db.db import connect_to_mongo
 
 import pyttsx3
 import speech_recognition as sr
@@ -17,6 +17,10 @@ collection = connect_to_mongo()
 
 recognizer = sr.Recognizer()
 tts_engine = pyttsx3.init()
+
+def speak_text(text):
+    tts_engine.say(text)
+    tts_engine.runAndWait()
 
 def listen_to_user():
     with sr.Microphone() as source:
@@ -27,19 +31,15 @@ def listen_to_user():
             print(f"User said: {user_input}")
             return user_input
         except sr.UnknownValueError:
-            print("Sorry, I could not understand the audio.")
+            speak_text("Sorry, I could not understand the audio.")
             return None
         except sr.RequestError as e:
             print(f"Could not request results; {e}")
             return None
         
-def speak_text(text):
-    tts_engine.say(text)
-    tts_engine.runAndWait()
-
 def voice_assistant():
-    #user_question = listen_to_user()
-    user_question = """Give me an introduction about myself."""
+    user_question = listen_to_user()
+    #user_question = """Give me an introduction about myself."""
 
     if user_question:
         docs = query(collection, user_question)

@@ -6,7 +6,7 @@ from langchain.chains.question_answering import load_qa_chain
 from langchain.prompts import PromptTemplate
 
 def query(collection, query):
-    embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001", google_api_key=os.getenv("GOOGLE_API_KEY"))
+    embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001", google_api_key=os.getenv("GEMINI_API_KEY"))
     vectorStore = MongoDBAtlasVectorSearch(collection, embeddings, index_name="vector_index")
     try:
         print("inside the function")
